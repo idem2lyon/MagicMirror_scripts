@@ -1,0 +1,89 @@
+MMM-GroveGestures :
+
+sudo apt-get update
+sudo apt-get install i2c-tools
+
+    After installation rebooting might be needed.
+    Try again sudo i2cdetect -y 1, if you can see 73 on the matrix of result, H/W is installed properly.
+
+cd ~/MagicMirror/modules
+git clone https://github.com/eouia/MMM-GroveGestures
+cd MMM-GroveGestures
+npm install
+cd scripts && chmod +x *.sh
+
+You might need to modify /scripts/*.sh files for your environment.
+
+After installation of module,
+
+cd ~/MagicMirror/modules/MMM-GroveGestures/py
+cp grove_gesture_sensor.py.RPI grove_gesture_sensor.py
+
+You can test your sensor with this;
+
+cd ~/MagicMirror/modules/MMM-GroveGestures/py
+python gesture_print.py
+
+------------------------------
+cd ~/MagicMirror/modules
+git clone https://github.com/prysme01/MMM-Jeedom.git
+
+-------------------------------
+
+cd ~/MagicMirror/modules
+git clone https://github.com/grenagit/MMM-VigilanceMeteoFrance
+cd ~/MagicMirror/modules/MMM-VigilanceMeteoFrance
+npm install
+
+-------------------------------
+cd ~/MagicMirror/modules
+git clone https://github.com/jclarke0000/MMM-DarkSkyForecast.git
+cd MMM-DarkSkyForecast 
+npm install
+
+-------------------------------
+cd ~/MagicMirror/modules
+git clone --depth=1 https://github.com/eouia/MMM-CalendarExt2
+cd MMM-CalendarExt2
+npm install
+
+------------------
+
+cd ~/MagicMirror/modules
+git clone https://github.com/bugsounet/MMM-Tools
+
+--------
+
+
+This module is pretty simple to set up. You simply need to clone the module into your modules folder (like other modules).
+
+cd ~/MagicMirror/modules
+git clone https://github.com/amcolash/MMM-GoogleFit.git
+
+Then add the following to MagicMirror/config/config.js and optionally configure any options below.
+
+{
+    module: 'MMM-GoogleFit',
+    position: 'position',
+    config: {
+        // If desired
+    }
+},
+
+Finally, restart your magic mirror.
+
+You will need to authenticate with google fit for this module to work. 
+Follow the onscreen instructions which should tell you to visit https://google.com/device and input the code displayed. 
+Simply enter the code and allow the module to access your google fit data. That's it!
+
+-----------------
+
+cd ~/MagicMirror/modules
+git clone https://github.com/bugsounet/MMM-TelegramBot.git
+cd MMM-TelegramBot
+npm install
+
+-------------------
+cd ~/MagicMirror/modules
+git clone https://github.com/edward-shen/MMM-page-indicator.git
+
