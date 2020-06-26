@@ -6,7 +6,7 @@ these scripts can be used to automate installation of release upgrades.
 ## raspberry.sh  is the installation script, upgraded from the core package
 to execute the install script, cut/paste this line into the terminal window on your device (I can't say PI, cause it works in a lot of other places too)
 
-####  bash -c  "$(curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/raspberry.sh)" 
+####  bash -c  "$(curl -sL https://raw.githubusercontent.com/idem2lyon/MagicMirror_scripts/master/raspberry.sh)" 
 
 there is a log file, MagicMirror/install.log, created so we can be able to diagnose any problems
     
@@ -19,13 +19,13 @@ only applying changes if u request them
 give it a try
 this works on Mac as well, cut/paste this line into the terminal window on your device
 
-#### bash -c  "$(curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/upgrade-script.sh)"
+#### bash -c  "$(curl -sL https://raw.githubusercontent.com/idem2lyon/MagicMirror_scripts/master/upgrade-script.sh)"
 
 no changes are made to the local repo or the working copy
 
 if you WANT to actually apply the changes, cut/paste this line into the terminal window on your device
 
-#### bash -c  "$(curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/upgrade-script.sh)" apply
+#### bash -c  "$(curl -sL https://raw.githubusercontent.com/idem2lyon/MagicMirror_scripts/master/upgrade-script.sh)" apply
 
 there is a log file (upgrade.log)  in the MagicMirror/installers folder…
 
@@ -36,9 +36,9 @@ I have provided those separately too, in case u need to run one separately, or c
 
 screensaveroff.sh, cut/paste this line into the terminal window on your device
 
-#### bash -c "$(curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/screensaveroff.sh)"
+#### bash -c "$(curl -sL https://raw.githubusercontent.com/idem2lyon/MagicMirror_scripts/master/screensaveroff.sh)"
 
 fixuppm2.sh, cut/paste this line into the terminal window on your device
 
-#### bash -c "$(curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/fixuppm2.sh)"
+#### bash -c "$(curl -sL https://raw.githubusercontent.com/idem2lyon/MagicMirror_scripts/master/fixuppm2.sh)"
 
