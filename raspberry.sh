@@ -284,7 +284,7 @@ if [ $doInstall == 1 ]; then
 	if git clone --depth=1 https://github.com/MichMich/MagicMirror.git; then
 		echo -e "\e[92mCloning MagicMirror Done!\e[90m" | tee -a $logfile
 		# replace faulty run-start.sh
-		curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/run-start.sh >MagicMirror/run-start.sh
+		curl -sL https://raw.githubusercontent.com/idem2lyon/MagicMirror_scripts/master/run-start.sh >MagicMirror/run-start.sh
 		chmod +x MagicMirror/run-start.sh
 	else
 		echo -e "\e[91mUnable to clone MagicMirror. \e[90m" | tee -a $logfile
@@ -311,7 +311,7 @@ if [ $doInstall == 1 ]; then
 		  else
 		  	echo "package.json update for armv6l failed " >>$logfile
 		  fi
-		  curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/run-start.sh >run-start.sh
+		  curl -sL https://raw.githubusercontent.com/idem2lyon/MagicMirror_scripts/master/run-start.sh >run-start.sh
 		  chmod +x run-start.sh
 		  # add fix to disable chromium update checks for a year from time started
 		  sudo touch /etc/chromium-browser/customizations/01-disable-update-check;echo CHROMIUM_FLAGS=\"\$\{CHROMIUM_FLAGS\} --check-for-update-interval=31536000\" | sudo tee /etc/chromium-browser/customizations/01-disable-update-check >/dev/null
@@ -479,8 +479,8 @@ if [[ $choice =~ ^[Yy]$ ]]; then
 		echo "configure the pm2 config file for MagicMirror" >>$logfile
 		# if the files we need aren't here, get them
 		if [ ! -e installers/pm2_MagicMirror.json ]; then
-			curl -sL https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/pm2_MagicMirror.json >installers/pm2_MagicMirror.json
-			curl -sl https://raw.githubusercontent.com/sdetweil/MagicMirror_scripts/master/mm.sh >installers/mm.sh
+			curl -sL https://raw.githubusercontent.com/idem2lyon/MagicMirror_scripts/master/pm2_MagicMirror.json >installers/pm2_MagicMirror.json
+			curl -sl https://raw.githubusercontent.com/idem2lyon/MagicMirror_scripts/master/mm.sh >installers/mm.sh
 			chmod +x installers/mm.sh
 		fi
 		if [ "$USER"  != "pi" ]; then
