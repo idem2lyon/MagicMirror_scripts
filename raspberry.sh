@@ -129,12 +129,12 @@ if [ $mac != 'Darwin' ]; then
 		echo "apt-get update  completed ok" >> $logfile
 		upgrade=$true
 	fi
-	if [ $upgrade -eq $true ]; then
-	   echo "apt-get upgrade  started" >> $logfile
-	   upgrade_result=$(sudo apt-get --assume-yes upgrade  2>&1)
-		 upgrade_rc=$?
-		 echo apt upgrade result ="rc=$upgrade_rc $upgrade_result" >> $logfile
-	fi
+	#if [ $upgrade -eq $true ]; then
+	#   echo "apt-get upgrade  started" >> $logfile
+	#   upgrade_result=$(sudo apt-get --assume-yes upgrade  2>&1)
+	#	 upgrade_rc=$?
+	#	 echo apt upgrade result ="rc=$upgrade_rc $upgrade_result" >> $logfile
+	#fi
 
 	# Installing helper tools
 	echo -e "\e[96mInstalling helper tools ...\e[90m" | tee -a $logfile
