@@ -93,3 +93,10 @@ npm install
 cd ~/MagicMirror/modules
 git clone https://github.com/edward-shen/MMM-page-indicator.git
 
+
+--------------------------------------
+sudo chgrp gpio /sys/class/gpio/export
+sudo chgrp gpio /sys/class/gpio/unexport
+sudo chmod 775 /sys/class/gpio/export
+sudo chmod 775 /sys/class/gpio/unexport
+
