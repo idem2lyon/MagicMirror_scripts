@@ -1,118 +1,107 @@
 
+echo "Installing module MMM-pages"
 cd ~/MagicMirror/modules
 git clone https://github.com/edward-shen/MMM-pages.git
 
---------------------------
+#######################
+#######################
 
-MMM-GroveGestures :
-
+echo "Installing module MMM-GroveGestures"
 sudo apt-get update
 sudo apt-get install i2c-tools
-
-    After installation rebooting might be needed.
-    Try again sudo i2cdetect -y 1, if you can see 73 on the matrix of result, H/W is installed properly.
-
+# sudo i2cdetect -y 1
+#
 cd ~/MagicMirror/modules
 git clone https://github.com/eouia/MMM-GroveGestures
 cd MMM-GroveGestures
 npm install
 cd scripts && chmod +x *.sh
 
-You might need to modify /scripts/*.sh files for your environment.
-
-After installation of module,
-
 cd ~/MagicMirror/modules/MMM-GroveGestures/py
 cp grove_gesture_sensor.py.RPI grove_gesture_sensor.py
 
-You can test your sensor with this;
-
 cd ~/MagicMirror/modules/MMM-GroveGestures/py
-python gesture_print.py
+# Wanna test it ? 
+#python gesture_print.py
 
-------------------------------
+#######################
+#######################
+
+echo "Installing module MMM-Jeedom"
 cd ~/MagicMirror/modules
 git clone https://github.com/prysme01/MMM-Jeedom.git
 
--------------------------------
+#######################
+#######################
 
+echo "Installing module MMM-VigilanceMeteoFrance"
 cd ~/MagicMirror/modules
 git clone https://github.com/grenagit/MMM-VigilanceMeteoFrance
 cd ~/MagicMirror/modules/MMM-VigilanceMeteoFrance
 npm install
 
--------------------------------
+#######################
+#######################
+
+echo "Installing module MMM-DarkSkyForecast"
 cd ~/MagicMirror/modules
 git clone https://github.com/jclarke0000/MMM-DarkSkyForecast.git
 cd MMM-DarkSkyForecast 
 npm install
 
--------------------------------
+#######################
+#######################
+
+echo "Installing module MMM-CalendarExt2"
 cd ~/MagicMirror/modules
 git clone --depth=1 https://github.com/eouia/MMM-CalendarExt2
 cd MMM-CalendarExt2
 npm install
 
-------------------
+#######################
+#######################
 
+echo "Installing module MMM-Tools"
 cd ~/MagicMirror/modules
 git clone https://github.com/bugsounet/MMM-Tools
 npm install
 
---------
+#######################
+#######################
 
-
-This module is pretty simple to set up. You simply need to clone the module into your modules folder (like other modules).
-
+echo "Installing module MMM-GoogleFit"
 cd ~/MagicMirror/modules
 git clone https://github.com/amcolash/MMM-GoogleFit.git
+# Register device at https://google.com/device
 
-Then add the following to MagicMirror/config/config.js and optionally configure any options below.
+#######################
+#######################
 
-{
-    module: 'MMM-GoogleFit',
-    position: 'position',
-    config: {
-        // If desired
-    }
-},
-
-Finally, restart your magic mirror.
-
-You will need to authenticate with google fit for this module to work. 
-Follow the onscreen instructions which should tell you to visit https://google.com/device and input the code displayed. 
-Simply enter the code and allow the module to access your google fit data. That's it!
-
------------------
-
+echo "Installing module MMM-TelegramBot"
 cd ~/MagicMirror/modules
 git clone https://github.com/bugsounet/MMM-TelegramBot.git
 cd MMM-TelegramBot
 npm install
 
--------------------
+#######################
+#######################
+
+echo "Installing module MMM-page-indicator"
 cd ~/MagicMirror/modules
 git clone https://github.com/edward-shen/MMM-page-indicator.git
 
+#######################
+#######################
 
---------------------------------------
-sudo chgrp gpio /sys/class/gpio/export
-sudo chgrp gpio /sys/class/gpio/unexport
-sudo chmod 775 /sys/class/gpio/export
-sudo chmod 775 /sys/class/gpio/unexport
+#sudo chgrp gpio /sys/class/gpio/export
+#sudo chgrp gpio /sys/class/gpio/unexport
+#sudo chmod 775 /sys/class/gpio/export
+#sudo chmod 775 /sys/class/gpio/unexport
 
---------------------------------------
-sudo apt-get install libjpeg8-dev imagemagick subversion cmake
-cd
-mkdir mjpg-streamer
-cd mjpg-streamer
-git clone https://github.com/jacksonliam/mjpg-streamer.git
-cd mjpg-streamer-experimental
-CFLAGS+="-Ofast -mfpu=vfp -mfloat-abi=hard -march=armv6zk -mtune=arm1176jzf-s" make
-sudo make install
+#######################
+#######################
 
-Exécution et visualisation
-	mjpg_streamer -i "/usr/local/lib/input_raspicam.so -x 1280 -y 720 -f 25 -rot 180" -o "/usr/local/lib/output_http.so -w /usr/local/www -p 9000"
+exit 0
 
-http://rov.local:9000 
-http://rov.local:9000/?action=stream
+
+
