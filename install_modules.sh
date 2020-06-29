@@ -20,8 +20,8 @@ cd scripts && chmod +x *.sh
 cd ~/MagicMirror/modules/MMM-GroveGestures/py
 cp grove_gesture_sensor.py.RPI grove_gesture_sensor.py
 
-cd ~/MagicMirror/modules/MMM-GroveGestures/py
 # Wanna test it ? 
+#cd ~/MagicMirror/modules/MMM-GroveGestures/py
 #python gesture_print.py
 
 #######################
