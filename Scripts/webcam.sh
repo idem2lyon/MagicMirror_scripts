@@ -5,7 +5,7 @@ cd
 mkdir mjpg-streamer
 cd mjpg-streamer
 git clone https://github.com/jacksonliam/mjpg-streamer.git
-cd mjpg-streamer-experimental
+cd mjpg-streamer/mjpg-streamer-experimental/
 CFLAGS+="-Ofast -mfpu=vfp -mfloat-abi=hard -march=armv6zk -mtune=arm1176jzf-s" make
 sudo make install
 
