@@ -100,3 +100,18 @@ sudo chgrp gpio /sys/class/gpio/unexport
 sudo chmod 775 /sys/class/gpio/export
 sudo chmod 775 /sys/class/gpio/unexport
 
+--------------------------------------
+sudo apt-get install libjpeg8-dev imagemagick subversion cmake
+cd
+mkdir mjpg-streamer
+cd mjpg-streamer
+git clone https://github.com/jacksonliam/mjpg-streamer.git
+cd mjpg-streamer-experimental
+CFLAGS+="-Ofast -mfpu=vfp -mfloat-abi=hard -march=armv6zk -mtune=arm1176jzf-s" make
+sudo make install
+
+Exécution et visualisation
+	mjpg_streamer -i "/usr/local/lib/input_raspicam.so -x 1280 -y 720 -f 25 -rot 180" -o "/usr/local/lib/output_http.so -w /usr/local/www -p 9000"
+
+http://rov.local:9000 
+http://rov.local:9000/?action=stream
