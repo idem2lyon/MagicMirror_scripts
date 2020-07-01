@@ -31,6 +31,8 @@ cp grove_gesture_sensor.py.RPI grove_gesture_sensor.py
 echo "Installing module MMM-SNCF"
 cd ~/MagicMirror/modules
 git clone https://github.com/jvanoost/MMM-SNCF.git
+cd MMM-SNCF
+npm install
 
 #######################
 #######################
@@ -38,7 +40,8 @@ git clone https://github.com/jvanoost/MMM-SNCF.git
 echo "Installing module MMM-Jeedom"
 cd ~/MagicMirror/modules
 git clone https://github.com/prysme01/MMM-Jeedom.git
-npm install
+#cd MMM-Jeedom
+#npm install
 
 #######################
 #######################
